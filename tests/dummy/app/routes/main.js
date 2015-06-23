@@ -19,6 +19,7 @@ export default Ember.Route.extend({
 		},
 		treeCreated:function(treeObject){
 			this.currentModel.treeComponent = treeObject;
+			treeObject.setImagePath("/assets/");
 		}
 	}
 })

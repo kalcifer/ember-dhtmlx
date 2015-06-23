@@ -10,7 +10,7 @@ var bind = Ember.run.bind;
 export default Ember.Component.extend({
 	didInsertElement:function(){
 		this.myTree = new dhtmlXTreeObject("treeboxbox_tree","100%","100%",0);
-		this.myTree.setImagePath("/assets/");
+		this.sendAction('created', this.myTree);
 		this.myTree.enableCheckBoxes(true, false);
 		this.myTree.enableThreeStateCheckboxes(true);
 		this.myTree.enableDragAndDrop(true);
@@ -18,7 +18,7 @@ export default Ember.Component.extend({
 		this.myTree.loadJSONObject(jsonObject);
 		var self = this;
 		this.listenToEvents();
-		this.sendAction('created', this.myTree);
+		
 	},
 	listenToEvents:function(){
 		var self = this;
