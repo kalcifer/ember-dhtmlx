@@ -14,8 +14,8 @@ export default Ember.Component.extend({
 		this.myTree.enableCheckBoxes(true, false);
 		this.myTree.enableThreeStateCheckboxes(true);
 		this.myTree.enableDragAndDrop(true);
-		var jsonObject = {id:0, item:[{id:1,text:"first"},{id:2, text:"middle", item:[{id:"21", text:"child"}]},{id:3,text:"last"}]};
-		this.myTree.loadJSONObject(jsonObject);
+		//var jsonObject = {id:0, item:[{id:1,text:"first"},{id:2, text:"middle", item:[{id:"21", text:"child"}]},{id:3,text:"last"}]};
+		//this.myTree.loadJSONObject(jsonObject);
 		var self = this;
 		this.listenToEvents();
 		
