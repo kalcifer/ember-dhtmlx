@@ -9,13 +9,11 @@ var bind = Ember.run.bind;
 
 export default Ember.Component.extend({
 	didInsertElement:function(){
-		this.myTree = new dhtmlXTreeObject("treeboxbox_tree","100%","100%",0);
+		this.myTree = new dhtmlXTreeObject(this.$()[0].id,"100%","100%",0);
 		this.sendAction('created', this.myTree);
 		this.myTree.enableCheckBoxes(true, false);
 		this.myTree.enableThreeStateCheckboxes(true);
 		this.myTree.enableDragAndDrop(true);
-		//var jsonObject = {id:0, item:[{id:1,text:"first"},{id:2, text:"middle", item:[{id:"21", text:"child"}]},{id:3,text:"last"}]};
-		//this.myTree.loadJSONObject(jsonObject);
 		var self = this;
 		this.listenToEvents();
 		

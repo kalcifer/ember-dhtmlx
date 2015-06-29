@@ -6,7 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function(){
-	this.route('main', {path:'/'})
+	this.route('main', {path:'/'});
+	this.route('nextone',{path:'/nextone'})
 });
 
 export default Router;
